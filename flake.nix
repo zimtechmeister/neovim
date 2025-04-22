@@ -112,7 +112,11 @@
       # This is for plugins that will load at startup without using packadd:
       startupPlugins = {
         gitPlugins = with pkgs.neovimPlugins; [];
-        general = with pkgs.vimPlugins; [];
+        general = with pkgs.vimPlugins; [
+          gruvbox-nvim
+          lualine-nvim
+          lze
+        ];
       };
 
       # not loaded automatically at startup.
@@ -211,7 +215,7 @@
     };
     # In this section, the main thing you will need to do is change the default package name
     # to the name of the packageDefinitions entry you wish to use as the default.
-    defaultPackageName = "nvim";
+    defaultPackageName = "nvim"; # TODO: change this
   in
     # see :help nixCats.flake.outputs.exports
     forEachSystem (system: let
