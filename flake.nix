@@ -113,9 +113,28 @@
       startupPlugins = {
         gitPlugins = with pkgs.neovimPlugins; [];
         general = with pkgs.vimPlugins; [
+          lze
           gruvbox-nvim
           lualine-nvim
-          lze
+          bufferline-nvim
+          colorizer
+          gitsigns-nvim
+          undotree
+          #live-preview.nvim
+          blink-cmp
+
+          flash-nvim
+          noice-nvim
+          todo-comments-nvim
+          trouble-nvim
+          which-key-nvim
+          snacks-nvim
+
+          mini-ai
+          mini-icons
+          mini-files
+          mini-deps
+          mini-comment
         ];
       };
 
