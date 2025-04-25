@@ -106,6 +106,12 @@
       # this includes LSPs
       lspsAndRuntimeDeps = {
         general = with pkgs; [
+          lua-language-server
+          jdt-language-server
+          clang-tools
+          eslint
+          typescript-language-server
+          nixd
         ];
       };
 
@@ -114,27 +120,16 @@
         gitPlugins = with pkgs.neovimPlugins; [];
         general = with pkgs.vimPlugins; [
           lze
-          gruvbox-nvim
-          lualine-nvim
-          bufferline-nvim
-          colorizer
-          gitsigns-nvim
-          undotree
-          #live-preview.nvim
-          blink-cmp
+          nvim-lspconfig
 
-          flash-nvim
-          noice-nvim
-          todo-comments-nvim
-          trouble-nvim
-          which-key-nvim
           snacks-nvim
 
           mini-ai
           mini-icons
-          mini-files
-          mini-deps
+          mini-pairs
           mini-comment
+          mini-surround
+          mini-files
         ];
       };
 
@@ -142,7 +137,26 @@
       # use with packadd and an autocommand in config to achieve lazy loading
       optionalPlugins = {
         gitPlugins = with pkgs.neovimPlugins; [];
-        general = with pkgs.vimPlugins; [];
+        general = with pkgs.vimPlugins; [
+          nvim-treesitter.withAllGrammars
+
+          gruvbox-nvim
+
+          blink-cmp
+
+          lualine-nvim
+          bufferline-nvim
+          gitsigns-nvim
+          undotree
+          markdown-preview-nvim
+          colorizer
+
+          which-key-nvim
+          todo-comments-nvim
+          noice-nvim
+          flash-nvim
+          trouble-nvim
+        ];
       };
 
       # shared libraries to be added to LD_LIBRARY_PATH
@@ -234,7 +248,7 @@
     };
     # In this section, the main thing you will need to do is change the default package name
     # to the name of the packageDefinitions entry you wish to use as the default.
-    defaultPackageName = "nvim"; # TODO: change this
+    defaultPackageName = "nvim";
   in
     # see :help nixCats.flake.outputs.exports
     forEachSystem (system: let
