@@ -5,6 +5,7 @@ https://nixcats.org/
 https://github.com/BirdeeHub/nixCats-nvim  
 https://github.com/BirdeeHub/nixCats-nvim/discussions  
 https://github.com/BirdeeHub/lze  
+https://github.com/BirdeeHub/birdeevim  
 
 ## these are loding hooks in lze
 sometimes i pass arguments in this function  
