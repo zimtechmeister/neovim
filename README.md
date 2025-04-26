@@ -6,6 +6,7 @@ https://github.com/BirdeeHub/nixCats-nvim
 https://github.com/BirdeeHub/nixCats-nvim/discussions  
 https://github.com/BirdeeHub/lze  
 https://github.com/BirdeeHub/birdeevim  
+https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/vim.section.md#what-if-your-favourite-vim-plugin-isnt-already-packaged-what-if-your-favourite-vim-plugin-isnt-already-packaged  
 
 ## these are loding hooks in lze
 sometimes i pass arguments in this function  

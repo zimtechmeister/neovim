@@ -135,11 +135,24 @@
 
       # not loaded automatically at startup.
       # use with packadd and an autocommand in config to achieve lazy loading
-      optionalPlugins = {
+      optionalPlugins = let
+        # instll plugins that are not in nixpkgs
+        # NOTE: pinned to a specific commit (rev): needs manual updating
+        vim-moonfly-colors = pkgs.vimUtils.buildVimPlugin {
+          name = "vim-moonfly-colors";
+          src = pkgs.fetchFromGitHub {
+            owner = "bluz71";
+            repo = "vim-moonfly-colors";
+            rev = "07feb1449938e4c5341a83ede6096a74bccb66d9";
+            hash = "sha256-/eHyLVgTAgzgkdz2HSQoLfk3PpmQItTirXvYRlWuA6k=";
+          };
+        };
+      in {
         gitPlugins = with pkgs.neovimPlugins; [];
         general = with pkgs.vimPlugins; [
           nvim-treesitter.withAllGrammars
 
+          vim-moonfly-colors
           gruvbox-nvim
 
           blink-cmp
