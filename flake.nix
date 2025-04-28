@@ -142,8 +142,8 @@
           src = pkgs.fetchFromGitHub {
             owner = "bluz71";
             repo = "vim-moonfly-colors";
-            rev = "main";
-            hash = "sha256-/eHyLVgTAgzgkdz2HSQoLfk3PpmQItTirXvYRlWuA6k=";
+            rev = "master";
+            hash = "sha256-r0ofEkSaZKg0u/VXe+NdMn1eXC3vWhRJMDLOcJ0fPwQ=";
           };
         };
       in {
