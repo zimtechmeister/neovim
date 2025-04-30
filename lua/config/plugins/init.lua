@@ -18,7 +18,7 @@ require('lze').load {
 -- require('noice').setup()
 
 -- require('config.plugins.gruvbox')
-require('config.plugins.everforest')
+require('config.plugins.gruvbox')
 
 require('config.plugins.bufferline')
 require('config.plugins.markdown-preview')
