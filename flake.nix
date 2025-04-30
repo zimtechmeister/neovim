@@ -146,12 +146,22 @@
             hash = "sha256-r0ofEkSaZKg0u/VXe+NdMn1eXC3vWhRJMDLOcJ0fPwQ=";
           };
         };
+        everforest-nvim = pkgs.vimUtils.buildVimPlugin {
+          name = "everforest-nvim";
+          src = pkgs.fetchFromGitHub {
+            owner = "neanias";
+            repo = "everforest-nvim";
+            rev = "main";
+            hash = "sha256-X+GaH76afaWmszGuLYf9VHP134jvmUCVSB7C7aiPSOs=";
+          };
+        };
       in {
         gitPlugins = with pkgs.neovimPlugins; [];
         general = with pkgs.vimPlugins; [
           nvim-treesitter.withAllGrammars
 
           vim-moonfly-colors
+          everforest-nvim
           gruvbox-nvim
 
           blink-cmp
