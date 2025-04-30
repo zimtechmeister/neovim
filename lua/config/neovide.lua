@@ -1,5 +1,5 @@
 if vim.g.neovide then
-    vim.o.guifont = "FiraCode Nerd Font:h12"
+    vim.o.guifont = "Maple Mono NF:h12"
     vim.g.neovide_confirm_quit = true
 
     -- zoom in/out
