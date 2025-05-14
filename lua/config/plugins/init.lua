@@ -17,7 +17,6 @@ require('lze').load {
 -- vim.cmd.packadd('noice.nvim')
 -- require('noice').setup()
 
--- require('config.plugins.gruvbox')
 require('config.plugins.gruvbox')
 
 require('config.plugins.bufferline')

@@ -2,9 +2,6 @@ local servers = {}
 servers.lua_ls = {
     settings = {
         Lua = {
-            formatters = {
-                ignoreComments = true,
-            },
             signatureHelp = { enabled = true },
             diagnostics = {
                 globals = { 'nixCats' },
@@ -46,7 +43,7 @@ servers.nixd = {
     }
 }
 
--- dont know if i need these capabilities also does not recognize what blink 
+-- dont know if i need these capabilities also does not recognize what blink
 -- local capabilities = require('blink.cmp').get_lsp_capabilities()
 vim.lsp.config('*', {
     -- capabilities = capabilities,
