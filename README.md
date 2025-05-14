@@ -26,8 +26,10 @@ end,
 ## other things i dont fully understand
 how do i set keymaps correctly
 
-how do i install plugins that are not in nixpkgs
-
 how to use neovide (https://github.com/BirdeeHub/nixCats-nvim/discussions/99)
 
 rename this repo
+
+how to lazyload plugins like "lualine-macro-recording" as a dependency
+
+autoupdate (maybe use github actions)

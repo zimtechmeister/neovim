@@ -112,11 +112,23 @@
           eslint
           typescript-language-server
           nixd
+          alejandra
         ];
       };
 
       # This is for plugins that will load at startup without using packadd:
-      startupPlugins = {
+      startupPlugins = let
+        # NOTE: i would rather lazyload this but dont know how cause its a dependencie of lualine
+        lualine-macro-recording = pkgs.vimUtils.buildVimPlugin {
+          name = "lualine-macro-recording";
+          src = pkgs.fetchFromGitHub {
+            owner = "yavorski";
+            repo = "lualine-macro-recording.nvim";
+            rev = "e2dcf63ba74e6111b53e1520a4f8a17a3d7427a1";
+            hash = "sha256-Jcgddq7ImqHHSGXPUheWfg6t5OenK4a9IBIUcOswXsk=";
+          };
+        };
+      in {
         gitPlugins = with pkgs.neovimPlugins; [];
         general = with pkgs.vimPlugins; [
           lze
@@ -130,6 +142,8 @@
           mini-comment
           mini-surround
           mini-files
+
+          lualine-macro-recording
         ];
       };
 
@@ -142,7 +156,7 @@
           src = pkgs.fetchFromGitHub {
             owner = "bluz71";
             repo = "vim-moonfly-colors";
-            rev = "master";
+            rev = "master"; # NOTE: this is unsafe pls use a specific commit
             hash = "sha256-r0ofEkSaZKg0u/VXe+NdMn1eXC3vWhRJMDLOcJ0fPwQ=";
           };
         };
@@ -151,7 +165,7 @@
           src = pkgs.fetchFromGitHub {
             owner = "neanias";
             repo = "everforest-nvim";
-            rev = "main";
+            rev = "main"; # NOTE: this is unsafe pls use a specific commit
             hash = "sha256-X+GaH76afaWmszGuLYf9VHP134jvmUCVSB7C7aiPSOs=";
           };
         };
