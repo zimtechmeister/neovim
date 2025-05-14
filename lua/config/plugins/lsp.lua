@@ -14,7 +14,6 @@ servers.lua_ls = {
 }
 servers.jdtls = {}
 servers.clangd = {}
-servers.clangd = {}
 servers.eslint = {}
 servers.ts_ls = {}
 servers.nixd = {
