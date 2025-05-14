@@ -160,8 +160,8 @@
         general = with pkgs.vimPlugins; [
           nvim-treesitter.withAllGrammars
 
-          vim-moonfly-colors
-          everforest-nvim
+          # vim-moonfly-colors
+          # everforest-nvim
           gruvbox-nvim
 
           blink-cmp
