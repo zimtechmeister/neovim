@@ -28,4 +28,4 @@ require('config.plugins.which-key')
 require('config.plugins.trouble')
 require('config.plugins.snacks')
 require('config.plugins.mini')
-require('config.plugins.lsp') -- NOTE: lsp in plugins dir? (does not need lze)
+require('config.plugins.lsp') -- TODO: move to its own lsp dir?

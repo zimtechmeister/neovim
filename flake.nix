@@ -109,8 +109,6 @@
           lua-language-server
           jdt-language-server
           clang-tools
-          eslint
-          typescript-language-server
           nixd
           alejandra
         ];
@@ -132,7 +130,7 @@
         gitPlugins = with pkgs.neovimPlugins; [];
         general = with pkgs.vimPlugins; [
           lze
-          nvim-lspconfig
+          lzextras
 
           snacks-nvim
 
@@ -177,6 +175,9 @@
           # vim-moonfly-colors
           # everforest-nvim
           gruvbox-nvim
+
+          nvim-lspconfig
+          lazydev-nvim
 
           blink-cmp
 
