@@ -18,7 +18,7 @@ return function(_, bufnr)
         },
     })
 
-    vim.keymap.set({ 'n', 'x' }, '<leader>l', '<cmd>lua vim.lsp.buf.format({async = true})<cr>',
+    vim.keymap.set({ 'n', 'x' }, '<leader>lf', '<cmd>lua vim.lsp.buf.format({async = true})<cr>',
         { desc = 'format buffer', buffer = bufnr })
     vim.keymap.set('n', '<leader>lj', '<cmd>lua vim.diagnostic.open_float()<cr>',
         { desc = 'show diagnostic' })
@@ -37,7 +37,7 @@ return function(_, bufnr)
     vim.keymap.set('n', '<leader>ls', '<cmd>lua vim.lsp.buf.signature_help()<cr>',
         { desc = 'signature help', buffer = bufnr })
     vim.keymap.set('n', '<leader>lR', '<cmd>lua vim.lsp.buf.rename()<cr>',
-        { desc = 'rename buffer', buffer = bufnr })
+        { desc = 'rename', buffer = bufnr })
     vim.keymap.set('n', '<leader>lc', '<cmd>lua vim.lsp.buf.code_action()<cr>',
         { desc = 'code actions', buffer = bufnr })
 end
