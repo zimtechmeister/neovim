@@ -1,9 +1,8 @@
 require('lze').load {
     {
-        "oxocarbon.nvim",
-        colorscheme = "oxocarbon",
+        "vimplugin-everforest-nvim",
+        colorscheme = "everforest",
     },
 }
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'
-vim.cmd.colorscheme 'oxocarbon'

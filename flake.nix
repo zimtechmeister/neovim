@@ -154,8 +154,8 @@
           src = pkgs.fetchFromGitHub {
             owner = "bluz71";
             repo = "vim-moonfly-colors";
-            rev = "master"; # NOTE: this is unsafe pls use a specific commit
-            hash = "sha256-r0ofEkSaZKg0u/VXe+NdMn1eXC3vWhRJMDLOcJ0fPwQ=";
+            rev = "e356d55cedb24a6c4251d83ce28e0e2010e99d2f";
+            hash = "sha256-dW/pswtVR0HEgbDZRynQH/83whK0YcKzc3J7lH26MVE=";
           };
         };
         everforest-nvim = pkgs.vimUtils.buildVimPlugin {
@@ -163,8 +163,17 @@
           src = pkgs.fetchFromGitHub {
             owner = "neanias";
             repo = "everforest-nvim";
-            rev = "main"; # NOTE: this is unsafe pls use a specific commit
-            hash = "sha256-X+GaH76afaWmszGuLYf9VHP134jvmUCVSB7C7aiPSOs=";
+            rev = "2eb7c348f880ba93de4d98cae049c9441f5d4d49";
+            hash = "sha256-LMIGPDhKZVqriGuPR9ICVo55QdyByLXOoRK82KfsRxU=";
+          };
+        };
+        vague-nvim = pkgs.vimUtils.buildVimPlugin {
+          name = "vague-nvim";
+          src = pkgs.fetchFromGitHub {
+            owner = "vague2k";
+            repo = "vague.nvim";
+            rev = "4edcde7208b420385a18a098d9b17757fdcbbc27";
+            hash = "sha256-C0cdXe5AMNV0XNNwFjPEEZna4U+S8Km8khPmM+N4F7k=";
           };
         };
       in {
@@ -172,8 +181,9 @@
         general = with pkgs.vimPlugins; [
           nvim-treesitter.withAllGrammars
 
-          # vim-moonfly-colors
-          # everforest-nvim
+          vim-moonfly-colors
+          everforest-nvim
+          vague-nvim
           gruvbox-nvim
           tokyonight-nvim
           oxocarbon-nvim

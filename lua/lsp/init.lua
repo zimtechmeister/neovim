@@ -10,7 +10,7 @@ require('lze').load {
         end,
         before = function(_)
             vim.lsp.config('*', {
-                on_attach = require('config.plugins.lsp-attach'),
+                on_attach = require('lsp.lsp-attach'),
             })
         end,
     },
@@ -60,7 +60,7 @@ require('lze').load {
             filetypes = { 'c', 'cpp' },
             -- clangd has some defaults set by lspconfig so i need this extra line here
             -- it should always match the lsp-attach file that is sourced by lspconfig
-            on_attach = require('config.plugins.lsp-attach'),
+            on_attach = require('lsp.lsp-attach'),
             -- settings = {
             --     clangd = {
             --         formatting = {
