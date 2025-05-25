@@ -176,6 +176,7 @@
           # everforest-nvim
           gruvbox-nvim
           tokyonight-nvim
+          oxocarbon-nvim
 
           nvim-lspconfig
           lazydev-nvim
