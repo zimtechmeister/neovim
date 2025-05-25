@@ -175,6 +175,7 @@
           # vim-moonfly-colors
           # everforest-nvim
           gruvbox-nvim
+          tokyonight-nvim
 
           nvim-lspconfig
           lazydev-nvim
