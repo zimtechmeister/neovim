@@ -8,12 +8,20 @@ return function(_, bufnr)
         -- hoide anoying underline on warnings or errors
         underline = false,
         -- use nerdfont symbols for diagnostics on left
+        float = {
+            border = "rounded",
+            source = true,
+        },
         signs = {
             text = {
-                [vim.diagnostic.severity.ERROR] = "",
-                [vim.diagnostic.severity.WARN] = "",
-                [vim.diagnostic.severity.INFO] = "",
-                [vim.diagnostic.severity.HINT] = "",
+                [vim.diagnostic.severity.ERROR] = " ",
+                [vim.diagnostic.severity.WARN] = " ",
+                [vim.diagnostic.severity.INFO] = " ",
+                [vim.diagnostic.severity.HINT] = " ",
+            },
+            numhl = {
+                [vim.diagnostic.severity.ERROR] = "ErrorMsg",
+                [vim.diagnostic.severity.WARN] = "WarningMsg",
             },
         },
     })
