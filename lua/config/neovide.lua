@@ -1,5 +1,5 @@
+-- NOTE: some settings are configured in a neovide/config.toml file
 if vim.g.neovide then
-    vim.o.guifont = "Maple Mono NF:h12"
     vim.g.neovide_confirm_quit = true
 
     -- zoom in/out
