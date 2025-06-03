@@ -111,6 +111,8 @@
           clang-tools
           nixd
           alejandra
+
+          gdb
         ];
       };
 
