@@ -187,6 +187,10 @@
           nvim-lspconfig
           lazydev-nvim
 
+          nvim-dap
+          nvim-dap-ui
+          nvim-nio
+
           blink-cmp
 
           lualine-nvim
