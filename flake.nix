@@ -115,18 +115,7 @@
       };
 
       # This is for plugins that will load at startup without using packadd:
-      startupPlugins = let
-        # NOTE: i would rather lazyload this but dont know how cause its a dependencie of lualine
-        lualine-macro-recording = pkgs.vimUtils.buildVimPlugin {
-          name = "lualine-macro-recording";
-          src = pkgs.fetchFromGitHub {
-            owner = "yavorski";
-            repo = "lualine-macro-recording.nvim";
-            rev = "e2dcf63ba74e6111b53e1520a4f8a17a3d7427a1";
-            hash = "sha256-Jcgddq7ImqHHSGXPUheWfg6t5OenK4a9IBIUcOswXsk=";
-          };
-        };
-      in {
+      startupPlugins = {
         gitPlugins = with pkgs.neovimPlugins; [];
         general = with pkgs.vimPlugins; [
           lze
@@ -140,8 +129,6 @@
           mini-comment
           mini-surround
           mini-files
-
-          lualine-macro-recording
         ];
       };
 
@@ -176,6 +163,15 @@
             hash = "sha256-C0cdXe5AMNV0XNNwFjPEEZna4U+S8Km8khPmM+N4F7k=";
           };
         };
+        lualine-macro-recording = pkgs.vimUtils.buildVimPlugin {
+          name = "lualine-macro-recording";
+          src = pkgs.fetchFromGitHub {
+            owner = "yavorski";
+            repo = "lualine-macro-recording.nvim";
+            rev = "e2dcf63ba74e6111b53e1520a4f8a17a3d7427a1";
+            hash = "sha256-Jcgddq7ImqHHSGXPUheWfg6t5OenK4a9IBIUcOswXsk=";
+          };
+        };
       in {
         gitPlugins = with pkgs.neovimPlugins; [];
         general = with pkgs.vimPlugins; [
@@ -194,6 +190,7 @@
           blink-cmp
 
           lualine-nvim
+          lualine-macro-recording
           bufferline-nvim
           gitsigns-nvim
           undotree

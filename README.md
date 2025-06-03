@@ -30,6 +30,4 @@ how to use neovide (https://github.com/BirdeeHub/nixCats-nvim/discussions/99)
 
 rename this repo
 
-how to lazyload plugins like "lualine-macro-recording" as a dependency
-
 autoupdate (maybe use github actions)

@@ -14,4 +14,8 @@ return {
             })
         end,
     },
+    {
+        "vimplugin-lualine-macro-recording",
+        dep_of = "lualine.nvim",
+    },
 }
