@@ -31,3 +31,5 @@ how to use neovide (https://github.com/BirdeeHub/nixCats-nvim/discussions/99)
 rename this repo
 
 autoupdate (maybe use github actions)
+
+swap all mini plugins for mini.deps also lazyloads to my understanding
