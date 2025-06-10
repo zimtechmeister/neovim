@@ -112,6 +112,12 @@
           nixd
           alejandra
 
+          rustc
+          cargo
+          rust-analyzer
+          clippy
+          rustfmt
+
           gdb
         ];
       };

@@ -50,9 +50,7 @@ require('lze').load {
     },
     {
         "jdtls",
-        lsp = {
-            filetypes = { 'java' },
-        },
+        lsp = {},
     },
     {
         "clangd",
@@ -68,6 +66,14 @@ require('lze').load {
             --         }
             --     }
             -- }
+        },
+    },
+    {
+        "rust_analyzer",
+        lsp = {
+            -- rust-analyzer has some defaults set by lspconfig so i need this extra line here
+            -- it should always match the lsp-attach file that is sourced by lspconfig
+            on_attach = require('lsp.lsp-attach'),
         },
     },
     {
