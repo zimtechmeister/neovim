@@ -112,6 +112,7 @@
           nixd
           alejandra
 
+          #rust
           rustc
           cargo
           rust-analyzer
@@ -198,6 +199,7 @@
           nvim-dap
           nvim-dap-ui
           nvim-nio
+          nvim-dap-virtual-text
 
           blink-cmp
 

@@ -1,5 +1,6 @@
 require('lze').register_handlers(require('lzextras').lsp)
 require('lze').load {
+    -- NOTE: for default lsp names and setting set by nvim-lspconfig visit https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
     {
         "nvim-lspconfig",
         on_require = { "lspconfig" },

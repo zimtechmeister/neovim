@@ -85,4 +85,8 @@ require('lze').load {
         "nvim-nio",
         dep_of = "nvim-dap-ui",
     },
+    {
+        "nvim-dap-virtual-text",
+        dep_of = "nvim-dap",
+    },
 }
