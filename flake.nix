@@ -187,9 +187,12 @@
           nvim-treesitter.withAllGrammars
 
           vim-moonfly-colors
+          everforest
           everforest-nvim
           vague-nvim
           gruvbox-nvim
+          gruvbox-material
+          gruvbox-material-nvim
           tokyonight-nvim
           oxocarbon-nvim
 

@@ -1,7 +1,7 @@
 require('lze').load {
     {
-        "everforest",
-        colorscheme = "everforest",
+        "gruvbox-material",
+        colorscheme = "gruvbox-material",
     },
 }
 vim.opt.termguicolors = true
